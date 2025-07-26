@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Customization</title>
+  <link rel="icon" type="image/x-icon" href="Icon.png">         
+  <link rel="stylesheet" href="style.css">              
+</head>
+<body>
+  <h1>Customize Your Watch</h1>
+  <div class="container">
+    
+    <!-- Watch Preview -->
+    <div class="watch-preview">
+      <div class="watch-dial" id="dial">\12/</div>
+      <div class="watch-strap1"></div>
+      <div class="watch-strap2"></div>
+    </div>  
+
+    <!-- Customization Options -->
+    <div class="options">
+      
+      <!-- Shape -->
+      <div class="section">
+        <h2>Shape</h2>
+        <div class="shape-options">
+          <div class="circle-shape"onclick="setShape('circle')"></div>
+          <div class="square-shape"onclick="setShape('square')"></div>
+        </div>
+      </div>
+
+      <!-- Strap -->
+      <div class="section">
+        <h2>Strap</h2>
+        <div class="strap-type">
+          <div class="option-box">Leather</div>
+          <div class="option-box">Metallic</div>
+        </div>
+      </div>
+
+      <!-- Strap Colors -->
+      <div class="section">
+        <h2>Colours of Strap</h2>
+        <div class="color-row">
+          <div class="color-box" data-color="brown" onclick="setStrapColor('brown')"></div>
+          <div class="color-box"></div>
+          <div class="color-box"></div>
+          <div class="color-box"></div>
+          <div class="color-box"></div>
+        </div>
+      </div>
+
+      <!-- Dial Colors -->
+      <div class="section">
+        <h2>Colours of Dial</h2>
+        <div class="color-row">
+          <div class="color-box" data-color="blue" onclick="setDialColor('blue')"></div>
+          <div class="color-box"></div>
+          <div class="color-box"></div>
+          <div class="color-box"></div>
+          <div class="color-box"></div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="section buttons">
+        <div class="btn" onclick="clearWatch()">Clear</div>
+        <div class="btn">Add to Cart</div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+  
