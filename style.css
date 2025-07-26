@@ -1,0 +1,200 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-left: 35%;
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+h1::after {
+  text-align: center;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transition: transform 0.3s ease;
+}
+
+h1:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  position: relative;
+  gap: 50%;
+}
+
+.watch-preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 6%;
+}
+
+.watch-dial {
+  width: 200px;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+  top: 19.5%;
+  align-items: center;
+  margin-left: 150%;
+  text-align: center;
+}
+
+ .watch-strap1 { 
+  width: 40px;
+  height: 240px;
+  background-color: white;
+  position: relative;
+  top: 16.5%;
+  margin-left: 150%;
+}
+
+ .watch-strap2 { 
+  width: 40px;
+  height: 250px;
+  background-color: white;
+  position: relative;
+  bottom: 80.2%;
+  margin-left: 150%;
+}
+
+.options {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  cursor: pointer;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.shape-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.circle-shape{
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+}
+.square-shape {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  margin-left: 4%;
+}
+
+.circle-shape {
+  border-radius: 50%;
+}
+
+.option-box {
+  border: 1px solid white;
+  padding: 10px;
+  margin: 5px 5px 0 0;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+}
+
+.color-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  text-align: center;
+  line-height: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.btn {
+  border: 1px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.color-box, .btn, .option-box, .circle-shape, .square-shape {
+  transition: all 0.1s ease;
+}
+
+.color-box:hover, .btn:hover, .option-box:hover, .circle-shape:hover, .square-shape:hover {
+  transform: scale(1.1);
+  border-color: yellow;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .watch-preview {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .watch-strap1,
+  .watch-dial,
+  .watch-strap2 {
+    margin-left: 0;
+  }
+
+  .options {
+    width: 100%;
+    align-items: center;
+  }
+
+  .strap-type,
+  .color-row,
+  .shape-options,
+  .buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .option-box,
+  .btn {
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
