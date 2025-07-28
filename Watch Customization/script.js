@@ -39,4 +39,5 @@ document.querySelectorAll(".strap-type .option-box").forEach(box => {
 
 function addCart() {
   alert("Your Watch Is Succsfully Add To Cart");
+  location.reload();
 }
