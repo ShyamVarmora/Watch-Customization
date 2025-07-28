@@ -36,3 +36,7 @@ function clearWatch() {
 document.querySelectorAll(".strap-type .option-box").forEach(box => {
   box.onclick = () => alert(`Strap type: ${box.innerText} selected`);
 });
+
+function addCart() {
+  alert("Your Watch Is Succsfully Add To Cart");
+}
