@@ -34,7 +34,7 @@ function clearWatch() {
 }
 
 document.querySelectorAll(".strap-type .option-box").forEach(box => {
-  box.onclick = () => alert(`Strap type: ${box.innerText} selected`);
+  box.onclick = () => alert(`Strap Type: ${box.innerText} Selected`);
 });
 
 function addCart() {
