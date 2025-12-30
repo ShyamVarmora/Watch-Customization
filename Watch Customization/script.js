@@ -126,7 +126,7 @@ function renderOptions(type) {
             ${previewContent}
             <div class="option-name">${option.name}</div>
             ${option.material ? `<div class="option-material">${option.material}</div>` : ''}
-            <div class="option-price">$${option.price}</div>
+            <div class="option-price">₹${option.price}</div>
         `;
         
         optionsGrid.appendChild(optionElement);
