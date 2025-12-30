@@ -1,75 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Watch Customization</title>
-  <link rel="icon" type="image/x-icon" href="Icon.png">         
-  <link rel="stylesheet" href="style.css">              
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos Atelier - Swiss Luxury Watch Customization</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Customize Your Watch</h1>
-  <div class="container">
-    
-    <!-- Watch Preview -->
-    <div class="watch-preview">
-      <div class="watch-dial" id="dial">\12/</div>
-      <div class="watch-strap1"></div>
-      <div class="watch-strap2"></div>
-    </div>  
+    <div class="min-h-screen bg-gradient">
+        <!-- Luxury Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg class="crown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14">
+                                <path d="M6 12l4-4 4 4 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="brand-text">
+                            <h1 class="brand-title">CHRONOS ATELIER</h1>
+                            <p class="brand-subtitle">Swiss Luxury Timepieces</p>
+                        </div>
+                    </div>
+                    
+                    <div class="header-features">
+                        <div class="feature">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                            </svg>
+                            <span>Lifetime Warranty</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                            </svg>
+                            <span>Swiss Movement</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 3h12l4 6-10 13L2 9l4-6z"/>
+                                <path d="M11 3L8 9l4 13 4-13-3-6"/>
+                                <path d="M2 9h20"/>
+                            </svg>
+                            <span>Handcrafted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <!-- Customization Options -->
-    <div class="options">
-      
-      <!-- Shape -->
-      <div class="section">
-        <h2>Shape</h2>
-        <div class="shape-options">
-          <div class="circle-shape"onclick="setShape('circle')"></div>
-          <div class="square-shape"onclick="setShape('square')"></div>
-        </div>
-      </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                    <span>MASTER WATCHMAKER COLLECTION</span>
+                </div>
+                
+                <h2 class="hero-title">
+                    Craft Your
+                    <span class="hero-title-accent">Masterpiece</span>
+                </h2>
+                
+                <p class="hero-description">
+                    Experience the art of haute horlogerie. Each timepiece is meticulously crafted with Swiss precision, 
+                    premium materials, and centuries of watchmaking tradition.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Options</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Satisfied Clients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Possibilities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- Strap -->
-      <div class="section">
-        <h2>Strap</h2>
-        <div class="strap-type">
-          <div class="option-box">Leather</div>
-          <div class="option-box">Metallic</div>
-        </div>
-      </div>
+        <!-- Main Customization Area -->
+        <main class="main-content">
+            <div class="container">
+                <div class="customization-grid">
+                    <!-- Watch Display -->
+                    <div class="watch-display-section">
+                        <div class="watch-display-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Live Preview</h3>
+                                <p class="card-subtitle">Watch your creation come to life</p>
+                            </div>
+                            <div id="watchDisplay" class="watch-display">
+                                <!-- Watch will be rendered here by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
 
-      <!-- Strap Colors -->
-      <div class="section">
-        <h2>Colours of Strap</h2>
-        <div class="color-row">
-          <div class="color-box" data-color="orange" onclick="setStrapColor('orange')"></div>
-          <div class="color-box" data-color="brown" onclick="setStrapColor('brown')"></div>
-          <div class="color-box" data-color="gray" onclick="setStrapColor('gray')"></div>
-          <div class="color-box" data-color="yellow" onclick="setStrapColor('yellow')"></div>
-          <div class="color-box" data-color="red" onclick="setStrapColor('red')"></div>
-        </div>
-      </div>
+                    <!-- Customization Panel -->
+                    <div class="customization-section">
+                        <div class="customization-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Customize</h3>
+                                <p class="card-subtitle">Select premium components</p>
+                            </div>
+                            
+                            <!-- Tabs -->
+                            <div class="tabs">
+                                <button class="tab active" data-tab="face">
+                                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>Face</span>
+                                </button>
+                                <button class="tab" data-tab="hands">
+                                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+                                        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/>
+                                        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/>
+                                        <path d="M18 8a2 2 0 1 1 0 4h-2l-8 4-2-1 1.5-3"/>
+                                        <path d="M9 21a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h4z"/>
+                                    </svg>
+                                    <span>Hands</span>
+                                </button>
+                                <button class="tab" data-tab="case">
+                                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    <span>Case</span>
+                                </button>
+                                <button class="tab" data-tab="strap">
+                                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M12 1v6m0 6v6"/>
+                                        <path d="m21 12-6 0m-6 0-6 0"/>
+                                    </svg>
+                                    <span>Strap</span>
+                                </button>
+                                <button class="tab" data-tab="markers">
+                                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 3h12l4 6-10 13L2 9l4-6z"/>
+                                    </svg>
+                                    <span>Markers</span>
+                                </button>
+                            </div>
 
-      <!-- Dial Colors -->
-      <div class="section">
-        <h2>Colours of Dial</h2>
-        <div class="color-row">
-          <div class="color-box" data-color="blue" onclick="setDialColor('blue')"></div>
-          <div class="color-box" data-color="green" onclick="setDialColor('green')"></div>
-          <div class="color-box" data-color="skyblue" onclick="setDialColor('skyblue')"></div>
-          <div class="color-box" data-color="purple" onclick="setDialColor('purple')"></div>
-          <div class="color-box" data-color="silver" onclick="setDialColor('silver')"></div>
-        </div>
-      </div>
+                            <!-- Options Grid -->
+                            <div id="optionsGrid" class="options-grid">
+                                <!-- Options will be rendered here by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
 
-      <!-- Buttons -->
-      <div class="section buttons">
-        <div class="btn" onclick="clearWatch()">Clear</div>
-        <div class="btn" onclick="addCart()">Add to Cart</div>
-      </div>
+                    <!-- Price & Actions -->
+                    <div class="price-section">
+                        <div id="priceDisplay" class="price-card">
+                            <!-- Price display will be rendered here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Premium Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="brand">
+                            <div class="brand-icon small">
+                                <svg class="crown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14">
+                                    <path d="M6 12l4-4 4 4 4-4"/>
+                                </svg>
+                            </div>
+                            <span class="brand-title">CHRONOS ATELIER</span>
+                        </div>
+                        <p class="footer-description">
+                            We have been creating exceptional timepieces that blend traditional Swiss 
+                            craftsmanship with contemporary innovation. Each watch is a testament to our unwavering 
+                            commitment to excellence.
+                        </p>
+                        <div class="footer-features">
+                            <div class="footer-feature">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                                <span>Lifetime Warranty</span>
+                            </div>
+                            <div class="footer-feature">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <span>Swiss Made</span>
+                            </div>
+                            <div class="footer-feature">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Certified Authentic</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Bespoke Design</a></li>
+                            <li><a href="#">Watch Servicing</a></li>
+                            <li><a href="#">Authentication</a></li>
+                            <li><a href="#">Restoration</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Heritage</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Master Craftsmen</a></li>
+                            <li><a href="#">Swiss Tradition</a></li>
+                            <li><a href="#">Innovation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 Chronos Atelier. Crafted with precision in India.
+                    </p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-  </div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
