@@ -274,34 +274,34 @@ function renderPriceDisplay() {
         <div class="price-breakdown">
             <div class="price-item">
                 <span class="price-item-name">Face: ${face.name}</span>
-                <span class="price-item-value">$${face.price}</span>
+                <span class="price-item-value">₹${face.price}</span>
             </div>
             <div class="price-item">
                 <span class="price-item-name">Hands: ${hands.name}</span>
-                <span class="price-item-value">$${hands.price}</span>
+                <span class="price-item-value">₹${hands.price}</span>
             </div>
             <div class="price-item">
                 <span class="price-item-name">Case: ${watchCase.name}</span>
-                <span class="price-item-value">$${watchCase.price}</span>
+                <span class="price-item-value">₹${watchCase.price}</span>
             </div>
             <div class="price-item">
                 <span class="price-item-name">Strap: ${strap.name}</span>
-                <span class="price-item-value">$${strap.price}</span>
+                <span class="price-item-value">₹${strap.price}</span>
             </div>
             <div class="price-item">
                 <span class="price-item-name">Markers: ${markers.name}</span>
-                <span class="price-item-value">$${markers.price}</span>
+                <span class="price-item-value">₹${markers.price}</span>
             </div>
             <div class="price-item" style="border-bottom: 1px solid #6b7280;">
                 <span class="price-item-name">Swiss Movement & Assembly</span>
-                <span class="price-item-value">$${basePrice}</span>
+                <span class="price-item-value">₹${basePrice}</span>
             </div>
         </div>
         
         <div class="price-total">
             <div class="price-total-row">
                 <span class="price-total-label">Total Investment</span>
-                <span class="price-total-value">$${finalPrice.toLocaleString()}</span>
+                <span class="price-total-value">₹${finalPrice.toLocaleString()}</span>
             </div>
             <p class="price-note">Includes lifetime warranty & certification</p>
         </div>
